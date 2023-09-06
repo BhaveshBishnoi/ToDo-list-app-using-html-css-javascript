@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightseagreen;
+}
+.todo{
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px 20px 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.todo h2{
+    margin: 10px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    overflow: -moz-hidden-unscrollable;
+}
+.todo img{
+    height: 30px;
+    align-items: center;
+}
+.txtarea{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(221, 236, 235);
+    margin: auto;
+    border-radius: 30px;
+    color: #ccc;
+}
+.txtarea input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    padding: 10px;
+}
+.txtarea button{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #eb6a00;
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.todo ul li{
+    list-style: none;
+    padding: 20px 20px 20px 45px;
+    font-size: 17px;
+    padding-bottom: 18px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ .todo ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);   
+    background-size: cover;
+    background-position: center; 
+    top: 15px;
+    left: 8px;
+} 
+.todo ul li.done{
+    color: #666;
+    text-decoration: line-through;
+}
+.todo ul li.done::before{
+    background: url(images/checked.png);
+    background-size: cover;
+}
+.todo span{
+    position: absolute;
+    right: 0;
+    top: 12px;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+.todo span:hover{
+    background-color: #888;
+    color: #fff;
+}
